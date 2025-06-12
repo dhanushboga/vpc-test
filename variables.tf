@@ -77,3 +77,19 @@ variable "private_subnet_cidr" {
 variable "database_subnet_cidr" {
   default = ["10.0.21.0/24", "10.0.22.0/24"]
 }
+
+variable "is_peering_required" {
+  default = "true"
+}
+
+variable "vpc_peering_tags" {
+  default = {
+    Name = "tagging for vpc peering"
+  }
+}
+
+variable "db_subnet_group_tags" {
+  default = {
+    Name = "tagging for db subnet group"
+  }
+}
